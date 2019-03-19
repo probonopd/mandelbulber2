@@ -90,7 +90,7 @@ script:
 # AppImage building and uploading
   - |
     if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-      cd ../build
+      cd ../../build
       make INSTALL_ROOT=appdir -j$(nproc) install ; find appdir/
       wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
       chmod a+x linuxdeployqt-continuous-x86_64.AppImage
